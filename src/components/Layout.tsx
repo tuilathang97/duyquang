@@ -1,7 +1,12 @@
 import Header from "@components/Header";
-import Image from "next/image";
+import { ReactNode } from "react";
 
-export default function Layout({ children }) {
+interface Props {
+  children?: ReactNode
+  // any props that come into the component
+}
+
+export default function Layout({ children } : Props) {
   return (
     <>
       <Header />

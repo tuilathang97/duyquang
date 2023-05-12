@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ReactNode } from "react";
 
 interface MarqueeListProps {
     images: Image[];
@@ -38,7 +39,7 @@ export default function MarqueeList( props  : MarqueeListProps) {
     )
 }
 
-const Marquee = ({ children, isFirstMarquee = true }) => {
+const Marquee = ({ children, isFirstMarquee = true } : { children? : ReactNode, isFirstMarquee?: boolean} ) => {
     return(
         <div className={`grid grid-cols-marqueeGrid gap-4 pl-4 md:pl-4 ${isFirstMarquee ? 'animate-marquee' : 'animate-marquee2'} absolute`}>
             { children }
